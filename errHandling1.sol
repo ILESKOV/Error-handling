@@ -9,8 +9,7 @@ contract Bank{
     balanceOf[msg.sender] += msg.value;
     totalSupply += msg.value;
     assert(balanceOf[msg.sender] >= msg.value);
-    //Wrong invariant
-    //assert(this.balance == totalSupply);
+    //assert(this.balance == totalSupply); <-- Wrong invariant
     //User can force deposit ETH without this function, so correct assertation(invariant) is below
     assert(this.balance >= totalSupply);
     }
