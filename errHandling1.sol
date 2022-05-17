@@ -8,6 +8,9 @@ contract Bank{
   function deposit() public payable{
     balanceOf[msg.sender] += msg.value;
     totalSupply += msg.value;
-    assert(totalSupply == (this).balance);
+    //Wrong statement
+    assert(this.balance == totalSupply);
+    //User can force deposit ETH without this function, so correct assertation is below
+    asert(this.balance >= totalSupply);
     }
 }
