@@ -9,6 +9,6 @@ contract Bank{
     uint amountToWithdraw = balanceOf[msg.sender];
     balanceOf[msg.sender] = 0;
     msg.sender.transfer(amountToWithdraw);
-    assert(balance[msg.sender] = 0);
+    assert(balance[msg.sender] == 0);
     }
  }
