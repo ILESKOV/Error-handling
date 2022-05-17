@@ -11,4 +11,4 @@ contract Bank{
     msg.sender.transfer(amountToWithdraw);
     assert(balance[msg.sender] == 0);
     }
- }
+}
