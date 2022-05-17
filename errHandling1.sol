@@ -10,7 +10,7 @@ contract Bank{
     totalSupply += msg.value;
     //Wrong statement
     assert(this.balance == totalSupply);
-    //User can force deposit ETH without this function, so correct assertation is below
+    //User can force deposit ETH without this function, so correct assertation(invariant) is below
     asert(this.balance >= totalSupply);
     }
 }
