@@ -8,7 +8,7 @@ contract Bank{
   function deposit() public payable{
     balanceOf[msg.sender] += msg.value;
     totalSupply += msg.value;
-    //Wrong statement
+    //Wrong invariant
     assert(this.balance == totalSupply);
     //User can force deposit ETH without this function, so correct assertation(invariant) is below
     asert(this.balance >= totalSupply);
