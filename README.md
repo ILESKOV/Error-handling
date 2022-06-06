@@ -8,4 +8,4 @@ we have valid input, valid conditions in our contract so that every variable, ev
 Assert should also be true. If we habe false, than we know that something is wrong with our code, it's not following the logic
 that we thought it did
 
-If the invariant is not true - something is wrong with our code. Therefore we go throw and revert the transaction.
+If the invariant is not true - something is wrong with our code. Therefore we go throw and revert the transaction..
